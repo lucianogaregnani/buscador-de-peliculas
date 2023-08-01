@@ -1,4 +1,5 @@
 import ListOfMovies from "./ListOfMovies"
+import noResponseMovies from '../mocks/noResponseMovies.json'
 
 export default function Movies({ movies }) {
     const hasMovies = movies.length > 0
