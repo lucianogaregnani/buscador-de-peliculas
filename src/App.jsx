@@ -7,7 +7,7 @@ function App() {
   const hasMovies = movies.length > 0
 
   return (
-    <div>
+    <div className='contenedor'>
       <header>
         <h1>Buscador de peliculas</h1>
         <form>
