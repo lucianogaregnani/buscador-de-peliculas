@@ -1,6 +1,4 @@
 import { useEffect, useRef, useState } from 'react'
-import moviesResponse from '../mocks/moviesResponse.json'
-const movies = moviesResponse.Search
 
 export function useBusqueda() {
     const [busqueda, setBusqueda] = useState('')
@@ -32,6 +30,6 @@ export function useBusqueda() {
         setBusqueda(value)
     }
 
-    return {busqueda, error, handleChange, movies}
+    return {busqueda, error, handleChange}
 
 }

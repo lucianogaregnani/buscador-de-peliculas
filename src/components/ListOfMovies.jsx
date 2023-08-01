@@ -4,7 +4,7 @@ export default function ListOfMovies({ movies }) {
     return(
         <ul>
             {
-                movies.map(movie => <Movie key={movie.imdbID} title={movie.Title} year={movie.Year} poster={movie.Poster} />)
+                movies.map(movie => <Movie key={movie.id} title={movie.title} year={movie.year} poster={movie.poster} />)
             }
         </ul>
     )
