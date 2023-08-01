@@ -1,4 +1,5 @@
 import './App.css'
+import Buscador from './components/Buscador'
 import moviesResponse from './mocks/moviesResponse.json'
 import noResponseMovies from './mocks/noResponseMovies.json'
 
@@ -9,11 +10,7 @@ function App() {
   return (
     <div className='contenedor'>
       <header>
-        <h1>Buscador de peliculas</h1>
-        <form>
-          <input type="text" placeholder='Buscar pelicula' />
-          <button>Buscar</button>
-        </form>
+        <Buscador busqueda=''/>
       </header>
       <main>
         {
