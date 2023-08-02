@@ -1,0 +1,14 @@
+.movies {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    list-style: none;
+    gap: 32px;
+}
+
+li {
+    text-align: center;
+}
+
+li img {
+    border-radius: 20px;
+}

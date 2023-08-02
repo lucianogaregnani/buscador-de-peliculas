@@ -1,3 +1,5 @@
+import '../movies.css'
+
 export default function Movie({ title, year, poster }) {
     return(
         <li>
