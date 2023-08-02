@@ -7,7 +7,7 @@ import useMovie from './hooks/useMovie'
 
 function App() {
   const { busqueda, error, handleChange } = useBusqueda()
-  const { movies, getMovies } = useMovie({ busqueda })
+  const { movies, getMovies, loading } = useMovie({ busqueda })
 
   return (
     <div className='contenedor'>
@@ -16,7 +16,9 @@ function App() {
         {error && <p>{error}</p>}
       </header>
       <main>
-        <Movies movies={movies} />
+        {
+          loading ? <p>Cargando...</p> : <Movies movies={movies} />
+        }
       </main>
     </div>
   )
