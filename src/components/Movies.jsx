@@ -1,12 +1,12 @@
 import ListOfMovies from "./ListOfMovies"
-import noResponseMovies from '../mocks/noResponseMovies.json'
+import '../movies.css'
 
 export default function Movies({ movies }) {
-    const hasMovies = movies.length > 0
+    const hasMovies = movies?.length > 0
 
     return(
         hasMovies ? 
             <ListOfMovies movies={movies} /> : 
-            <p>{noResponseMovies.Error}</p>
+            <p>No hay peliculas con ese nombre!</p>
     )
 }
