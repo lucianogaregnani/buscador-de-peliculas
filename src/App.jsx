@@ -6,13 +6,13 @@ import useMovie from './hooks/useMovie'
 
 
 function App() {
-  const { busqueda, error, handleChange } = useBusqueda()
-  const { movies, getMovies, loading } = useMovie({ busqueda })
+  const { busqueda, error, handleChange, handleChangeText, check } = useBusqueda()
+  const { movies, getMovies, loading } = useMovie({ busqueda, check })
 
   return (
     <div className='contenedor'>
       <header>
-        <Buscador busqueda={busqueda} change={handleChange} getMovies={getMovies} />
+        <Buscador busqueda={busqueda} change={handleChange} getMovies={getMovies} changeCheck={handleChangeText} />
         {error && <p>{error}</p>}
       </header>
       <main>

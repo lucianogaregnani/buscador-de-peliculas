@@ -3,6 +3,8 @@ import useErrorBusqueda from './useErrorBusqueda'
 
 export function useBusqueda() {
     const [busqueda, setBusqueda] = useState('')
+    const [check, setCheck] = useState(false)
+
     const {error} = useErrorBusqueda({ busqueda })
 
     const handleChange = (event) => {
@@ -10,6 +12,10 @@ export function useBusqueda() {
         setBusqueda(value)
     }
 
-    return {busqueda, error, handleChange}
+    const handleChangeText = (event) => {
+        setCheck(!check)
+    }
+
+    return {busqueda, error, handleChange, handleChangeText, check}
 
 }
